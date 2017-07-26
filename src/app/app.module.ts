@@ -4,26 +4,26 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from "@angular/http";
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
-import { AppComponent } from './app.component';
+import { AppComponent } from './app/app.component';
 import { PostsComponent } from './posts/posts.component';
 import { AppRoutingModule } from "./app-routing.module";
 
-import { PostsService } from "./services/posts.service";
-import { BearsService } from "./services/bears.service";
 import { BearsComponent } from './bears/bears.component';
+import { PageNotFoundComponent } from "./not-found.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
-    BearsComponent
+    BearsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PostsService, BearsService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

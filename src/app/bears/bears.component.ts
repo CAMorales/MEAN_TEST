@@ -4,7 +4,8 @@ import { BearsService } from "../services/bears.service";
 @Component({
   selector: 'app-bears',
   templateUrl: './bears.component.html',
-  styleUrls: ['./bears.component.css']
+  styleUrls: ['./bears.component.css'],
+  providers: [BearsService]
 })
 export class BearsComponent implements OnInit {
   bears : any = [];
