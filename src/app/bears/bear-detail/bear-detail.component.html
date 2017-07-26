@@ -1,11 +1,12 @@
-<div *ngIf="bear">
+
+<div class="row" *ngIf="bear">
   <h2>{{bear.name}} details!</h2>
   <div><label>id: </label>{{bear._id}}</div>
-  <div>
-    <label>name: </label>
-    <input [(ngModel)]="bear.name" placeholder="name" />
+  <div class="form-group">
+    <label for="name" class="control-label">name: </label>
+    <input [(ngModel)]="bear.name" placeholder="name" id="name" class="form-control" />
   </div>
-  <button (click)="save()">Save</button>
-  <button (click)="goBack()">Back</button>
-  <button class="delete" (click)="delete(bear); $event.stopPropagation()">Borrar</button>
+  <button class="btn btn-sm btn-success" (click)="save()">Save</button>
+  <button class="btn btn-sm btn-default" (click)="goBack()">Back</button>
+  <button class="btn btn-sm btn-danger" (click)="delete(bear); $event.stopPropagation()">Borrar</button>
 </div>

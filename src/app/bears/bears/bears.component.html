@@ -1,17 +1,23 @@
-<div class="container">
-  <div>
-    <label>Bear name:</label> <input #bearName />
-    <button (click)="add(bearName.value); bearName.value=''">
-    Add
-  </button>
+<div class="row">
+  <div class="col-sm-6">
+    <label class="label label-info">Bear name:</label> <input #bearName />
+    <button class="btn btn-sm btn-success" (click)="add(bearName.value); bearName.value=''">
+      Add
+    </button>
   </div>
-  <div class="row" *ngFor="let bear of bears">
-    <div class="card card-block">
-      <h4 class="card-title">{{ bear.name }}</h4>
-      <p class="card-text">{{bear.name}}</p>
-      <a [routerLink]="['/detail', bear._id]" class="card-link">Card link</a>
-      <button class="delete" (click)="delete(bear); $event.stopPropagation()">Borrar</button>
-      <a href="#" class="card-link">Another link</a>
+</div>
+<hr>
+<div class="row">
+  <div class="col-sm-6" *ngFor="let bear of bears">
+    <div class="panel panel-primary">
+      <div class="panel panel-heading">
+        <h4 class="panel-title">{{ bear.name }}</h4>
+      </div>
+      <div class="panel-body">
+        <p class="card-text">{{bear.name}}</p>
+        <a [routerLink]="['/detail', bear._id]" class="btn btn-sm btn-info card-link">Card link</a>
+        <button class="btn btn-sm btn-danger" (click)="delete(bear); $event.stopPropagation()">Borrar</button>
+      </div>
     </div>
   </div>
 </div>
