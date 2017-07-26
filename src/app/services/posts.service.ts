@@ -9,7 +9,7 @@ export class PostsService {
   constructor(private http: Http) { }
   // Get all posts from the API
   getAllPosts() {
-    return this.http.get(environment.apiUrl + '/api/posts')
+    return this.http.get(environment.apiUrl + 'api/posts')
       .map(res => res.json());
   }
 

@@ -42,7 +42,7 @@ router.route('/bears')
         console.log(err);
         res.send(err);
       }
-      res.json({ message: 'Bear Created!' });
+      res.json({ bear });
     });
   }).get(function (req, res) {
     Bear.find(function (err, bears) {
