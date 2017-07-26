@@ -9,7 +9,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class BearsService {
 
-  private bearsApi = 'api/bears'
+  private bearsApi = 'api/bears';
   private headers = new Headers({ 'Content-Type': 'application/json' });
 
   constructor(private http: Http) { }

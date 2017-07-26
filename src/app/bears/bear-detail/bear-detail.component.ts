@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from "@angular/router";
-import { Location } from "@angular/common";
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Location } from '@angular/common';
 
-import { BearsService } from "../service/bears.service";
+import { BearsService } from '../service/bears.service';
 
 import 'rxjs/add/operator/switchMap';
 

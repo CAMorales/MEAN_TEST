@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PostsComponent } from './posts/posts.component';
 // import { BearsComponent } from "./bears/bears.component";
-import { PageNotFoundComponent } from "./not-found.component";
+import { PageNotFoundComponent } from './not-found.component';
 
 // import { DashboardComponent }   from './dashboard/dashboard.component';
 // import { HeroesComponent }      from './heroes.component';

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BearsService } from "../service/bears.service";
+import { BearsService } from '../service/bears.service';
 
 @Component({
   selector: 'app-bears',
@@ -13,7 +13,7 @@ export class BearsComponent implements OnInit {
 
   ngOnInit() {
     this.bearsService.getAllBears().then(bears => {
-      this.bears = bears
+      this.bears = bears;
     });
   }
 
